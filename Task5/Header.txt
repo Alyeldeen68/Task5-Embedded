@@ -1,0 +1,11 @@
+void DIO_init(ST_DIO_config_t* configurations); void DIO_write(uint8_t port, EN_pins pin, uint8_t data); void DIO_read(uint8_t port, EN_pins pin, uint8_t* data);
+void DIO_toggle(uint8_t port, EN_pins pin);
+void PWM_init(ST_PWM_config_t* configurations);
+void PWM_start(EN_frequency_t frequency, EN_duty_t dutyCycle);
+void PWM_stop(void);
+
+void TIMER_init(ST_TIMER_config_t* configurations);
+void TIMER_start(uint64_t ticks);
+void TIMER_read(uint8_t* value);
+void TIMER_set(uint8_t value);
+void TIMER_checkStatus(uint8_t* status);
